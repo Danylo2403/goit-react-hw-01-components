@@ -9,7 +9,7 @@ import {
   Item,
   Label,
   Quantity,
-} from './profile.styled';
+} from './Profile.styled';
 
 export const Profile = ({
   user: {
@@ -21,7 +21,8 @@ export const Profile = ({
   },
 }) => {
   return (
-    <Profile>
+    
+    <ProfileWrapper>
       <Description>
         <Avatar src={avatar} alt="User avatar" />
         <Name>{username}</Name>
@@ -43,6 +44,7 @@ export const Profile = ({
           <Quantity>{likes}</Quantity>
         </Item>
       </StatsList>
-    </Profile>
+      </ProfileWrapper>
+      
   );
 };
