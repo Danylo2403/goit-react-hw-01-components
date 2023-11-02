@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import { getRandomHexColor } from '../../utils/color-randomizer';
+import { getRandomHexColor } from '../../utils/color-randomizer';
 
 export const StatisticsWrap = styled.section`
   margin-top: 80px;
