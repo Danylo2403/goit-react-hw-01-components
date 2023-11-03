@@ -5,11 +5,10 @@ export const Friend = styled.li`
   align-items: center;
   padding: 10px;
   width: 100%;
-  background-color: #ffffff;
-  border-radius: 4px;
-  -webkit-box-shadow: -2px 9px 25px -9px rgba(0, 0, 0, 0.75);
-  box-shadow: -2px 9px 25px -9px rgba(0, 0, 0, 0.75);
-  transition: all 300ms ease-in;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 300ms ease-in;
 
   &:hover {
     transform: scale(1.04);
@@ -20,7 +19,7 @@ export const StatusIndicator = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: ${getStatusColor};
+  background-color: ${props => (props.$isOnline ? '#50AD53' : '#FF4F55')};
   margin-right: 10px;
 `;
 
@@ -31,12 +30,3 @@ export const Avatar = styled.img`
 export const Name = styled.p`
   font-size: 24px;
 `;
-
-function getStatusColor(props) {
-  switch (props.$isOnline) {
-    case true:
-      return '#50AD53';
-    default:
-      return '#FF4F55';
-  }
-}
